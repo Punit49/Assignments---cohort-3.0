@@ -1,0 +1,377 @@
+@font-face {
+    font-family: "Agatho";
+    src: url("./agatho/Agatho_Regular.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Agatho";
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+:root{
+    --text-primary: #61684e;
+}
+
+.mainContainer{
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    background: url("./whiteBG.jpg");
+    background-size: cover;
+}
+
+/* Navbar */
+header{
+    padding: 2.5rem 0 1.4rem 0;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#brandName{
+    font-size: 3.5rem;
+    font-weight: 100;
+}
+
+.navLinks > ul{
+    display: flex;
+    gap: 2.9rem;
+}
+
+.navLinks > ul > li{
+    list-style: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.navLinks > ul > li > a{
+    text-decoration: none;
+    color: rgb(33, 33, 33);
+}
+
+.navLinks > ul > li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background: rgb(91, 91, 91);
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width .2s ease-in-out;
+}
+
+.navLinks > ul > li:hover::after{
+    width: 80%;
+}
+
+.menuBtns{
+    display: flex;
+    gap: 1.8rem;
+    font-size: 1.5rem;
+}
+
+.menuBtns i{
+    font-size: 2.1rem;
+}
+
+/* Main Section */
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.fashionCardTop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fashionCardLeft{
+    width: 35%;
+    position: relative;
+}
+
+.fashionCardRight{
+    width: 60%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    gap: 3rem;
+}
+
+.newTag{
+    color: var(--text-primary);
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}
+
+.newTag > span:nth-child(1){
+    font-size: 2rem;
+}
+
+.cardTitle{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.cardHeading{
+    font-size: 7rem;
+}
+
+.cardHeading:nth-of-type(2){
+    margin-top: -40px;
+    position: relative;
+}
+
+.cardHeading:nth-of-type(2)::after{
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 3px;
+    width: 4rem;
+    height: 2px;
+    background-color: var(--text-primary);
+}
+
+.contentSection{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: gray;
+    text-align: justify;
+    font-size: 1.1rem;
+}
+
+.colorsInfo{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.colorsInfo span{
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: rgb(83, 83, 83);
+}
+
+.colors{
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 0.65rem;
+}
+
+.colors:nth-of-type(1){
+    background-color: #7d836d;
+}
+
+.colors:nth-of-type(2){
+    background-color: #e4dcd3;
+}
+
+.colors:nth-of-type(3){
+    background-color: #e1a8a5;
+}
+
+.cardDetails h5{
+    font-size: larger;
+    font-weight: 900;
+    color: rgb(83, 83, 83);
+    margin-bottom: .45rem;
+}
+
+.sideSection{
+    position: absolute;
+    right: -12.5rem;
+    bottom: 12rem;
+    color: rgb(53, 53, 53);
+    font-size: 2.2rem;
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sidebarLine{
+    display: inline-block;
+    height: 3px;
+    width: 4rem;
+    background-color: var(--text-primary);
+}
+
+.mainImg{
+    background: url("./Assets/girl\ in\ scalf.jpg");
+    height: 36rem;
+    width: 80%;
+    background-size: cover;
+    background-position: center;
+    margin-left: 1rem;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 85%;
+}
+
+.previewImg{
+    width: 7rem;
+    height: 7.8rem;
+    border-radius: 15px;
+}
+
+.imgOptions{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.imgOptions > span{
+    display: inline-block;
+    padding: 1px;
+    width: 7.4rem;
+    border-radius: 15px;
+    height: 8.2rem;
+    border: 3px solid var(--text-primary);
+}
+
+.rating{
+    position: absolute;
+    background-color: white;
+    padding: .85rem 1rem;
+    top: 1.8rem;
+    right: 11rem;
+    border-radius: 20px;
+}
+
+.addToBagBtn{
+    position: absolute;
+    background-color: var(--text-primary);
+    padding: 2.6rem 1.2rem;
+    bottom: 2.2rem;
+    right: 9rem;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(231, 229, 229);
+    font-weight: 900;
+}
+
+.ri-star-fill{
+    color: var(--text-primary);
+}
+
+.priceTag{
+    position: absolute;
+    background-color: white;
+    padding: .5rem .7rem;
+    width: fit-content;
+    top: 1.8rem;
+    left: 2.5rem;
+    font-size: 1.3rem;
+    border-radius: 15px;
+}
+
+/* Card Bottom */
+.fashionCardBottom{
+    display: flex;
+    gap: 1rem;
+    width: 89%;
+    justify-content: space-between;
+}
+
+.cardFeatures{
+    display: flex;
+    align-items: center;
+}
+
+.cardFeature{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 50px;
+    height: fit-content;
+    border-right: 1px solid #c5bbad;
+}
+
+.cardFeature:nth-child(1){
+    padding-left: 0;
+}
+
+.cardFeature i {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #e5dfd6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #4a6741;
+}
+
+.featureTitle{
+    text-align: center;
+}
+
+.cardFeature:last-child{
+    border-right: none;
+}
+
+.ri-leaf-line, .ri-shirt-line{
+    font-size: 2rem;
+    color: var(--text-primary);
+}
+
+.cardBar{
+    box-shadow: 0px 0px 2.5px 0px var(--text-primary);
+    padding: 1.4rem 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    border-radius: 20px;
+    height: fit-content;
+    margin-top: .5rem;
+}
+
+.feature{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.feature i{
+    font-size: 3rem;
+    color: var(--text-primary);
+}
+
+@media (max-width: 1100px) {
+    .mainContainer{
+        width: 90%;
+    }
+    .navLinks{
+        display: none;
+    }
+}
