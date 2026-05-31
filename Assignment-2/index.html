@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="mainContainer">
+        <header>
+            <nav>
+                <div class="navMain">
+                    <h2>
+                        <span class="logo">ASTRO</span>
+                    </h2>
+                    <ul class="navLinks">
+                        <li><a href="/products">PRODUCTS</a></li>
+                        <li><a href="/category">CATEGORY</a></li>
+                        <li><a href="/aboutus">ABOUT US</a></li>
+                        <li><a href="/contact">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="navBtns">
+                    <a href="/search"><i class="ri-search-line"></i></a>
+                    <a href="/shop"><i class="ri-shopping-cart-line"></i></a>
+                    <a href="/profile"><i class="ri-user-line"></i></a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="heroSection">
+                <section class="jacketContentLeft box">
+                    <div class="jacketInfo">
+                        <span class="oranegColorElem">NEW</span>
+                        <h1 id="jacketTitle">
+                            <span>ASTRO</span>
+                            <span>WINTER</span>
+                            <span>ARMOR <span class="oranegColorElem">II</span></span>
+                        </h1>
+                        <div class="jacketPrice">&dollar;560</div>
+                    </div>
+
+                    <div class="jacketDescription featureBorder">
+                        <h4>Description</h4>
+                        <article id="jacketText">A next-gen cold war jacket. The
+                            essence of retro style and the
+                            resilience you need for extreme winter
+                            conditions. Engineered to provide
+                            versatile function for your winter
+                            wardrobe, accented with strategic
+                            utility details.
+                        </article>
+                        <div class="readMore">
+                            <span>READ MORE</span>
+                            <i class="oranegColorElem ri-arrow-right-s-line"></i>
+                        </div>
+                    </div>
+
+                    <div class="jacketFeatures">
+                        <span class="featureBorder">
+                            MATERIAL & CARE
+                            <i class="ri-arrow-down-s-line"></i>
+                        </span>
+                        <span class="featureBorder">
+                            SHIPPING & RETURNS
+                            <i class="ri-arrow-down-s-line"></i>
+                        </span>
+                    </div>
+                </section>
+
+                <img id="heroImage" src="./Assets/jacketBeighe.webp" alt="">
+
+                <section class="jacketSizeSection box">
+                    <div class="sizeBox">
+                        <span id="sizeHead">SIZE</span>
+                        <div class="sizeOptions">
+                            <span>S</span>
+                            <span id="mSize">M</span>
+                            <span>L</span>
+                            <span>XL</span>
+                        </div>
+                        <span>SIZE GUIDE <i class="ri-arrow-right-s-line"></i></span>
+                    </div>
+
+                    <div class="jacketColors">
+                        <h3 id="colorHead">COLORS</h3>
+                        <div>
+                            <span class="colorOpt">
+                                <span class="colorImg" id="selected">
+                                    <img src="./Assets/jacketBeighe.webp" alt="">
+                                </span>    
+                                <span>Beige</span>
+                            </span>
+                            <span class="colorOpt">
+                                <span class="colorImg">
+                                    <img src="./Assets/jacketOrange.webp" alt="">
+                                </span>    
+                                <span>Orange</span>
+                            </span>
+                        </div>
+                        <div>
+                            <span class="colorOpt">
+                                <span class="colorImg">
+                                    <img src="./Assets/jacketBlue.png" alt="">
+                                </span>    
+                                <span>Blue</span>
+                            </span>
+                            <span class="colorOpt">
+                                <span class="colorImg">
+                                    <img src="./Assets/jacketWhite.webp" alt="">
+                                </span>    
+                                <span>White</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shopBtns">
+                        <button class="addToWish">
+                            <i class="ri-poker-hearts-line"></i>
+                            <span>ADD TO WISHLIST</span>
+                        </button>
+                        <button class="addToBag">
+                            <span>ADD TO BAG</span>
+                            <i class="ri-shopping-bag-line"></i>
+                        </button>
+                    </div>
+                </section>
+            </section>
+
+            <section class="jacketTags">
+                <span>
+                    <i class="ri-snowflake-line"></i> 
+                    <span>EXTREME WARMTH</span>
+                </span>
+                <span>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>WIND RESISTENT</span>
+                </span>
+                <span>
+                    <i class="fa-solid fa-feather-pointed fa-2xs"></i>
+                    <span>LIGHT WEIGHT</span>
+                </span>
+            </section>
+        </main>
+    </div>
+
+    <div class="hidden" id="desktopModale">
+        <p>This Landing page is designed for larger screens, 
+        switch to larger screen for best experience.</p>
+        <button>I Understand</button>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
