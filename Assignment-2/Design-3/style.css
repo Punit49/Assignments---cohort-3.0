@@ -1,0 +1,161 @@
+@font-face {
+    font-family: "Designer";
+    src: url("./assets/designer_2/Designer.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Designer", sans-serif;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+:root{
+    --bg-primary: #fc4609;
+    --bg-secondary: #591f09;
+    --bg-tertory: rgb(23, 23, 23);
+    --text-secondary: #d17a54;
+    --text-tertary: #6c6c6c;
+}
+
+body{
+    background-color: black;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+#logo > h1{
+    font-size: 1.4rem;
+}
+
+#logo > img{
+    width: 4rem;
+    height: 4rem;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > ul{
+    display: flex;
+    gap: 2rem;
+}
+
+header > ul > li{
+    list-style: none;
+}
+
+header > ul > li > a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+header > button{
+    padding: 0.75rem 1rem;
+    font-size: 1.2rem;
+    background-color: var(--bg-tertory);
+    border: none;
+    border-radius: 10px;
+}
+
+.mianContainer{
+    padding: 1rem 2rem;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+.heroTitle > h1{
+    font-size: 7rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.filters{
+    display: flex;
+    gap: 1rem;
+}
+
+.filters > span{
+    padding: 1rem;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--bg-tertory);
+}
+
+.filters > span:nth-child(1){
+    background-color: var(--bg-primary);
+}
+
+.cards{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.card{
+    width: 24rem;
+    height: 32rem;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: var(--bg-tertory);
+}
+
+.card > img{
+    width: 100%;
+    height: 55%;
+    object-fit: fill;
+    border-radius: 20px;
+}
+
+.cardInfo{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.2rem;
+}
+
+.tag{
+    font-size: 1.1rem;
+    background-color: var(--bg-secondary);
+    width: fit-content;
+    padding: 0.45rem 0.65rem;
+    border-radius: 20px;
+    color: var(--text-secondary);
+}
+
+.cardTitle{
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.date{
+    color: var(--text-tertary);
+    font-size: 1rem;
+    margin-top: auto;
+}
