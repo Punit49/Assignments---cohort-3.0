@@ -131,6 +131,10 @@ header{
     font-size: 3.5rem;
 }
 
+.timeLine{
+    color: var(--text-bg);
+}
+
 #cartBtn{
     display: flex;
     flex-direction: column;
