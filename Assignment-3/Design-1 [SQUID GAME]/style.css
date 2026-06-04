@@ -1,0 +1,263 @@
+@font-face {
+    font-family: "HeadingPro";
+    src: url("./ASSETS/heading-pro-wide-trial/Heading-Pro-Wide-Heavy-trial.ttf");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("./ASSETS/game_of_squids/Game\ Of\ Squids.ttf") format("truetype");
+}
+
+:root{
+    --text-primary: white;
+    --text-main: #e53c7d;
+    --border-main: #861e46;
+    --text-secondary: rgb(163, 163, 163);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-primary);
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, #0e0517 0%, #15021a 40%, #3a081d 75%, #590c24 100%);
+}
+
+.mainContainer{
+    height: 100%;
+    width: 100%;
+    padding: 1rem 6.5rem 3rem;
+    position: relative;
+    overflow-x: hidden;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.08),
+                inset 0 0 40px rgba(180, 30, 80, 0.15),
+                inset 0 0 80px rgba(120, 20, 60, 0.10);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 7rem;
+}
+
+#logo > img{
+    width: 100%;
+    height: 100%;
+}
+
+header > ul{
+    display: flex;
+    gap: 2rem;
+}
+
+header > ul > li{
+    font-size: 1.4rem;
+    list-style: none;
+}
+
+header > ul > li > a{
+    text-decoration: none;
+    position: relative;
+    font-family: "Oswald";
+}
+
+header > ul > li > a::after{
+    content: "";
+    position: absolute;
+    bottom: -0.45rem;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: var(--text-main);
+    transition: width 0.3s ease;
+}
+
+header > ul > li > a:hover::after{
+    content: "";
+    position: absolute;
+    bottom: -0.45rem;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--text-main);
+}
+
+.menuBar > i{
+    font-size: 2rem;
+}
+
+/* Hero Section */
+#heroSection{
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#heroLeft{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#heroLeft > img{
+    width: 32rem;
+}
+
+#heroImg{
+    width: 41rem;
+    max-height: 40rem;
+    opacity: 0.45;
+}
+
+#heroLeft > p{
+    width: 75%;
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+}
+
+.btns{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.heroBtns:nth-child(1){
+    background: linear-gradient(
+    90deg,
+    #A01050 0%,
+    #D23A5D 35%,
+    #E66A33 70%,
+    #C45D17 100%
+    );
+}
+
+.heroBtns:nth-child(2){
+    background: transparent;
+    border: 2px solid var(--border-main);
+}
+
+.heroBtns{
+    padding: 0.95rem 2rem;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    border: none;
+}
+
+.playBtn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--text-primary);
+    border-radius: 50%;
+    padding: 0.24rem;
+    margin-right: .4rem;
+}
+
+.playBtn > i{
+    color: black;
+}
+
+/* Cards */
+#cards{
+    width: 100%;
+    padding: 1.5rem ;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(
+        90deg,
+        #570A3B 0%,
+        #540B3D 35%,
+        #4E0A39 70%,
+        #39072D 100%
+    );
+    border-radius: 10px;
+    margin-top: -2rem;
+    position: relative;
+    box-shadow:
+        0 0 15px rgba(255, 70, 140, 0.25),
+        0 0 35px rgba(255, 70, 140, 0.18),
+        0 0 70px rgba(255, 70, 140, 0.10),
+        0 12px 25px rgba(0, 0, 0, 0.4);
+    }
+    
+    #cards > img{
+    overflow: hidden;
+    transition: transform .3s linear;
+    width: 25rem;
+    height: 16rem;
+    object-fit: fill;
+    border-radius: 15px;
+}
+
+#cards > img:hover{
+    transform: scale(1.02);
+}
+
+#cards::after{
+    content: "GAME";
+    position: absolute;
+    top: -5rem;
+    font-size: 8rem;
+    font-family: "HeadingPro";
+    left: 2rem;
+    color: rgb(131, 131, 131);
+    right: 0;
+    bottom: 0;
+    opacity: 0.15;
+    z-index: -1;
+    text-shadow:
+        0 0 30px rgba(255,255,255,0.08),
+        0 0 60px rgba(255,255,255,0.05),
+        0 0 100px rgba(255,255,255,0.03);
+
+    opacity: 0.08;
+    filter: blur(1px);
+}
+
+#squidText{
+    position: absolute;
+    top: 15rem;
+    font-size: 8rem;
+    font-family: "HeadingPro";
+    color: rgb(131, 131, 131);
+    right: -16rem;
+    text-shadow:
+        0 0 30px rgba(255,255,255,0.08),
+        0 0 60px rgba(255,255,255,0.05),
+        0 0 100px rgba(255,255,255,0.03);
+    opacity: 0.15;
+    transform: rotateZ(270deg);    
+}
+
+#scrollTag{
+    position: absolute;
+    top: 10rem;
+    right: 50%;
+    transform: rotateZ(270deg);
+    font-size: 1.2rem;
+    opacity: 0.5;
+    padding-left: 1rem;
+}
+
+#scrollTag::before{
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 2px;
+    background-color: var(--border-main);
+    left: -2.7rem;
+    bottom: -1.8rem;
+    transform: translate(-50%, -50%);
+    transform: rotateZ(270deg);
+}
