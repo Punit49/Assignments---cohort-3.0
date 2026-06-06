@@ -2,7 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'helvetica neue';
+    color: white;
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("./assets/poppins/Poppins-ExtraBold.ttf") format(truetype);
 }
 
 :root{
@@ -11,44 +16,74 @@
 
 html,
 body{
-    min-width: 100%;
+    min-width: 100vw;
     min-height: 100vh;
-}
-
-
-header, nav{
-    width: 80%;
+    overflow-x: hidden;
+    background: url("./assets/body.png");
+    font-family: "poppins";
 }
 
 header{
+    width: 100%;
     margin: 0 auto;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
 }
 
 header > nav{
+    width: 80%;
+    margin: 0 auto;
     display: flex;
-    padding: 1rem;
+    padding: 0rem 1rem;
     justify-content: space-between;
     align-items: center;
 }
 
+.socials{
+    display: flex;
+    gap: 1rem;
+}
+
+.socials > span{
+    background: white;
+    border-radius: 28%;
+    padding: 0.24rem;
+}
+
+.socials > span > i{
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+
 nav > ul{
     display: flex;
-    gap: 1.7rem;
+    gap: 1.4rem;
+}
+
+nav > ul > li{
+    list-style: none;
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.65rem 0.3rem;
 }
 
 #logo{
-    height: 5rem;
-    width: 8rem;
+    height: 4rem;
+    width: 10rem;
 }
 
 main{
     display: flex;
     flex-direction: column;
     position: relative;
+    gap: 2rem;
+    padding-bottom: 3rem;
 }
 
 #heroSection {
@@ -60,6 +95,7 @@ main{
     position: relative;
     width: 100%;
     overflow: hidden;
+    clip-path: ellipse(100% 100% at 50% 0%);
 }
 
 #monkey{
@@ -69,4 +105,86 @@ main{
     bottom: -20rem;
     height: 50rem;
     transform: translateX(-50%);
+    animation: moveMonkey 2s ease-in-out infinite alternate;
+}
+
+#heroContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#heroContent > h3{
+    font-size: 2rem;
+}
+
+#heroHeads{
+    font-size: 6rem;
+    width: 58rem;
+    display: flex;
+    gap: 9rem;
+    font-weight: 900;
+}
+
+#lastPara{
+    text-align: end;
+    font-size: 1.5rem;
+}
+
+#visionSection{
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+#visionSection > h1{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+#visionHr{
+    width: 50rem;
+    height: 4rem;
+}
+
+#paras{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#paras > p{
+    width: 45%;
+    color: gray;
+    text-align: justify;
+}
+
+#btn{
+    width: 15rem;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+}
+
+#selected{
+    background-color: rgb(200, 162, 106);
+    color: black;
+    font-weight: 700;
+    opacity: 0.45;
+}
+
+@keyframes moveMonkey {
+    0%{
+        transform: translateX(-50%) translateY(-10px);
+    }
+    100%{
+        transform: translateX(-50%) translateY(10px);
+    }
 }
